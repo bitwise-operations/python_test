@@ -1,0 +1,105 @@
+1486400221478	geckodriver	INFO	Listening on 127.0.0.1:63913
+1486400223248	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.6gRUcmgnNGf2
+1486400223250	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1486400223703	geckodriver::marionette	INFO	Connecting to Marionette on localhost:63922
+1486400229499	Marionette	INFO	Listening on port 63922
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00C3,name=PContent::Msg_ConsoleMessage) Channel closing: too late to send/recv, messages will be lost
+
+1486453645682	geckodriver	INFO	Listening on 127.0.0.1:50169
+1486453647264	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.VTG5abXFS4pZ
+1486453647266	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1486453647300	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50178
+1486453651762	Marionette	INFO	Listening on port 50178
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00C3,name=PContent::Msg_ConsoleMessage) Channel closing: too late to send/recv, messages will be lost
+
+1486453736447	geckodriver	INFO	Listening on 127.0.0.1:50285
+1486453737667	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.K61nRtP5q7Xj
+1486453737669	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1486453737692	geckodriver::marionette	INFO	Connecting to Marionette on localhost:50294
+1486453740293	Marionette	INFO	Listening on port 50294
+JavaScript error: https://staging.level.travel/assets/js-assets-production.js?v=925f6e5072f91935935280caf19d29ab, line 2: SyntaxError: expected expression, got '<<'
+JavaScript error: https://staging.level.travel/, line 18: ReferenceError: _cht is not defined
+JavaScript error: https://staging.level.travel/, line 24: ReferenceError: loadHeaderImage is not defined
+JavaScript error: https://staging.level.travel/, line 25: ReferenceError: $ is not defined
+JavaScript error: https://staging.level.travel/, line 35: ReferenceError: init_component is not defined
+JavaScript error: https://staging.level.travel/, line 36: ReferenceError: $ is not defined
+JavaScript error: https://staging.level.travel/, line 42: ReferenceError: init_component is not defined
+JavaScript error: https://staging.level.travel/, line 42: ReferenceError: init_component is not defined
+JavaScript error: https://staging.level.travel/flock_push_worker.js, line 1: ReferenceError: importScripts is not defined
+JavaScript error: https://staging.level.travel/, line 62: ReferenceError: $ is not defined
+JavaScript error: https://staging.level.travel/assets/js-assets-production.js?v=925f6e5072f91935935280caf19d29ab, line 2: SyntaxError: expected expression, got '<<'
+JavaScript error: https://staging.level.travel/, line 18: ReferenceError: _cht is not defined
+JavaScript error: https://staging.level.travel/, line 24: ReferenceError: loadHeaderImage is not defined
+JavaScript error: https://staging.level.travel/, line 25: ReferenceError: $ is not defined
+JavaScript error: https://staging.level.travel/, line 35: ReferenceError: init_component is not defined
+JavaScript error: https://staging.level.travel/, line 36: ReferenceError: $ is not defined
+JavaScript error: https://staging.level.travel/, line 42: ReferenceError: init_component is not defined
+JavaScript error: https://staging.level.travel/, line 42: ReferenceError: init_component is not defined
+JavaScript error: https://staging.level.travel/flock_push_worker.js, line 1: ReferenceError: importScripts is not defined
+1488819483523	geckodriver	INFO	Listening on 127.0.0.1:56704
+1488819485203	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.jfvAPBjC7VTg
+1488819485205	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488819485469	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56713
+1488819488568	Marionette	INFO	Listening on port 56713
+1488819492837	Marionette	WARN	Using deprecated data structure for setting timeouts
+JavaScript error: https://dg8srx4tk6h24.cloudfront.net/assets/common/analytics.cohorts.prod-fe8a871064420468152a86177c5690c0.js, line 1: ReferenceError: ga is not defined
+1488819566980	geckodriver	INFO	Listening on 127.0.0.1:56901
+1488819568157	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.PW89W1FX9pEc
+1488819568159	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488819568220	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56910
+1488819571221	Marionette	INFO	Listening on port 56910
+1488819575641	Marionette	WARN	Using deprecated data structure for setting timeouts
+1488819694672	geckodriver	INFO	Listening on 127.0.0.1:57002
+1488819695848	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.TpTPhTIl2T4Q
+1488819695850	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488819695873	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57011
+1488819698335	Marionette	INFO	Listening on port 57011
+1488819700878	Marionette	WARN	Using deprecated data structure for setting timeouts
+JavaScript error: https://dg8srx4tk6h24.cloudfront.net/assets/common/analytics.cohorts.prod-fe8a871064420468152a86177c5690c0.js, line 1: ReferenceError: ga is not defined
+JavaScript error: chrome://browser/content/places/browserPlacesViews.js, line 263: TypeError: this.controller is undefined
+JavaScript error: chrome://browser/content/places/browserPlacesViews.js, line 263: TypeError: this.controller is undefined
+1488819773020	geckodriver	INFO	Listening on 127.0.0.1:57188
+1488819775323	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.4SV6yo0y6zMu
+1488819775327	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488819775357	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57197
+1488819781001	Marionette	INFO	Listening on port 57197
+1488819786410	Marionette	WARN	Using deprecated data structure for setting timeouts
+JavaScript error: chrome://browser/content/places/browserPlacesViews.js, line 263: TypeError: this.controller is undefined
+JavaScript error: chrome://browser/content/browser-places.js, line 1409: TypeError: showItem is null
+1488819865903	geckodriver	INFO	Listening on 127.0.0.1:57359
+1488819867116	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.oASQXmxJV1a4
+1488819867118	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488819867144	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57368
+1488819868893	Marionette	INFO	Listening on port 57368
+1488819871148	Marionette	WARN	Using deprecated data structure for setting timeouts
+JavaScript error: https://dg8srx4tk6h24.cloudfront.net/assets/common/analytics.cohorts.prod-fe8a871064420468152a86177c5690c0.js, line 1: ReferenceError: ga is not defined
+1488819945404	geckodriver	INFO	Listening on 127.0.0.1:57536
+1488819946717	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.onD9i8OzCYpC
+1488819946721	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488819946780	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57545
+1488819949994	Marionette	INFO	Listening on port 57545
+1488819955744	Marionette	WARN	Using deprecated data structure for setting timeouts
+console.error: 
+  Message: Error: Connection closed before committing the transaction.
+  Stack:
+    ConnectionData.prototype<.executeTransaction/promise</transactionPromise<@resource://gre/modules/Sqlite.jsm:617:19
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:551:9
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker/<@resource://gre/components/nsAsyncShutdown.js:157:15
+Promise@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:388:5
+nsAsyncShutdownClient.prototype.addBlocker/moduleBlocker@resource://gre/components/nsAsyncShutdown.js:153:29
+Barrier/this.client.addBlocker/promise</trigger@resource://gre/modules/AsyncShutdown.jsm:720:23
+Barrier.prototype<._wait@resource://gre/modules/AsyncShutdown.jsm:867:7
+Barrier.prototype<.wait@resource://gre/modules/AsyncShutdown.jsm:851:28
+Spinner.prototype.observe@resource://gre/modules/AsyncShutdown.jsm:534:17
+
+1488879891193	geckodriver	INFO	Listening on 127.0.0.1:58801
+1488879895968	mozprofile::profile	INFO	Using profile path /var/folders/jt/vlnzrgy17dn07jtgl7crhntr0000gn/T/rust_mozprofile.kfP3NAmlv8Xg
+1488879895970	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1488879896013	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58810
+1488879900326	Marionette	INFO	Listening on port 58810
