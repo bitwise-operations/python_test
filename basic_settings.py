@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from _configs._configs import Configs
+from _configs._configs_css import Configs_css
 from selenium.webdriver.chrome.options import Options
 
 
@@ -23,5 +24,7 @@ class Basic_settings(Configs):
         self.EC = EC
 
         Configs.__init__(self, *args, **kwargs)
+        Configs_css.__init__(self, *args, **kwargs)
         self.configs()
+        self.configs_css()
 
