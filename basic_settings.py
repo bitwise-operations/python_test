@@ -11,13 +11,13 @@ from _configs._configs_css import Configs_css
 from selenium.webdriver.chrome.options import Options
 
 
-class Basic_settings(Configs):
+class Basic_settings(Configs, Configs_css):
 
     def __init__(self, *args, **kwargs):
         options = webdriver.ChromeOptions()
         options.add_argument("user-data-dir=/Users/qa1/Library/Application\ Support/Google/Chrome",)
         options.add_argument("--profile-directory=qwe1")
-        self.driver = webdriver.Chrome('/Users/qa1/pytest/chromedriver', chrome_options=options)
+        self.driver = webdriver.Chrome('/Users/qa1/pytest2/chromedriver', chrome_options=options)
         self.driver.implicitly_wait(50)
         self.wait = WebDriverWait(self.driver, 60)
         self.By = By

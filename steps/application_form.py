@@ -2,16 +2,12 @@
 # -*- coding: UTF-8 -*-
 
 from basic_settings import Basic_settings
-from _configs._configs import Configs
 import time
 
 
 class Application_form(Basic_settings):
     def __init__(self, *args, **kwargs):
-
         Basic_settings.__init__(self, *args, **kwargs)
-        Configs.__init__(self, *args, **kwargs)
-        self.configs()
 
     def choice_tour(self):
         driver = self.driver

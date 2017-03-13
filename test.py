@@ -2,21 +2,16 @@
 # -*- coding: UTF-8 -*-
 
 import unittest
-import time
-from _configs._configs import Configs
 from steps.main_search import Main_search
-from steps.application_form import Application_form
+# from steps.application_form import Application_form
 
 
-class Test_form(Configs, Main_search, Application_form, unittest.TestCase):
+class Test_form(Main_search, unittest.TestCase):
     def __init__(self, *args, **kwargs):
-        unittest.TestCase.__init__(self, *args, **kwargs)   
-        Configs.__init__(self, *args, **kwargs)
         Main_search.__init__(self, *args, **kwargs)
-        Application_form.__init__(self, *args, **kwargs)
-        
-        self.configs()
-        
+        # Application_form.__init__(self, *args, **kwargs)
+        unittest.TestCase.__init__(self, *args, **kwargs)   
+
 
     # def test_form(self):
     #     search = Main_search(self.base_url)
@@ -29,6 +24,7 @@ class Test_form(Configs, Main_search, Application_form, unittest.TestCase):
         # new_choice = applic.choice_tour()
         #form = applic.appli_form("Buyer")
         self.s_form_lite(self.s_url, "Search_data_lite")
+        # self.choice_tour()
 
 
 if __name__ == '__main__':
