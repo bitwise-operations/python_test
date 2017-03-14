@@ -23,8 +23,8 @@ class Test_form(Main_search, unittest.TestCase):
         # applic = Application_form()
         # new_choice = applic.choice_tour()
         #form = applic.appli_form("Buyer")
-        self.s_form_lite(self.s_url, "Search_data_lite")
-        # self.choice_tour()
+
+        # self.s_form_lite(self.s_url, "Search_data_lite")
 
 
 if __name__ == '__main__':
