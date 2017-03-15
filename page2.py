@@ -1,7 +1,8 @@
-from element import BasePageElement
+from element import BaseSearchElement
 from locators import MainPageLocators
+from selenium.webdriver.common.by import By
 
-class SearchTextElement(BasePageElement):
+class SearchTextElement(BaseSearchElement):
     """This class gets the search text from the specified locator"""
 
     #The locator for search box where search string is entered
@@ -33,3 +34,12 @@ class MainSearch(BasePage):
         _url = "/".join([self.base_url, s_url, data])
         driver.get(_url)
         
+    def click_go_button(self, name_button):
+        """Triggers the search"""
+        xpath = self.conf.get("Xpath_buttton", name_button)
+        element = self.driver.find_element(By.XPATH, xpath)
+        element.click()
+
+    def switch_fr(self):
+        for handle in self.driver.window_handles:
+            self.driver.switch_to_window(handle)

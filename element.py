@@ -18,3 +18,12 @@ class BasePageElement(object):
             lambda driver: driver.find_element_by_xpath(self.locator))
         element = driver.find_element_by_xpath(self.locator)
         return element.get_attribute("value")
+
+class BaseSearchElement(object):
+
+    def __get__(self, obj, owner):
+        driver = obj.driver
+        WebDriverWait(driver, 100).until(
+            lambda driver: driver.find_element_by_xpath(self.locator))
+        element = driver.find_element_by_xpath(self.locator)
+        # return element.get_attribute("value")
