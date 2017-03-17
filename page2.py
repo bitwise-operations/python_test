@@ -1,4 +1,5 @@
 from element import BaseSearchElement
+from element import BaseSwitch
 from locators import MainPageLocators
 from selenium.webdriver.common.by import By
 
@@ -7,6 +8,9 @@ class SearchTextElement(BaseSearchElement):
 
     #The locator for search box where search string is entered
     locator = "//*[@id='search_results']"
+
+class Switch(BaseSwitch):
+    pass
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from all pages"""
@@ -20,6 +24,7 @@ class BasePage(object):
 class MainSearch(BasePage):
 
     search_text_element = SearchTextElement()
+    switch_fr = BaseSwitch()
 
     def lite_search(self, s_url, section):
         driver = self.driver
@@ -40,6 +45,5 @@ class MainSearch(BasePage):
         element = self.driver.find_element(By.XPATH, xpath)
         element.click()
 
-    def switch_fr(self):
-        for handle in self.driver.window_handles:
-            self.driver.switch_to_window(handle)
+
+

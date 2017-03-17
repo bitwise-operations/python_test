@@ -16,8 +16,10 @@ class Test_form(Basic_settings, unittest.TestCase):
         main_search = page2.MainSearch(self.driver, self.conf, self.base_url)
         a = main_search.lite_search(self.s_url, "Search_data_lite")
         main_search.search_text_element
-        main_search.click_go_button("tour_1")        
-        main_search.switch_fr()
+        main_search.click_go_button("tour_1")
+        main_search.switch_fr
+        main_search.click_go_button("look_cost")
+
         time.sleep(2)
         # assert main_page.is_title_matches(), "python.org title doesn't match."
         # main_page.search_text_element = "pycon"
