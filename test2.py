@@ -19,6 +19,11 @@ class Test_form(Basic_settings, unittest.TestCase):
         main_search.click_go_button("tour_1")
         main_search.switch_fr
         main_search.click_go_button("look_cost")
+        time.sleep(2)
+        main_search.click_go_button("package_1")
+        time.sleep(2)
+        main_search.switch_fr
+        main_search.data_entry("Buyer", "surname", "surname_buyer")
 
         time.sleep(2)
         # assert main_page.is_title_matches(), "python.org title doesn't match."

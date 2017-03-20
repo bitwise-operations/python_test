@@ -45,5 +45,11 @@ class MainSearch(BasePage):
         element = self.driver.find_element(By.XPATH, xpath)
         element.click()
 
+    def data_entry(self, section, option, name_field):
+        value_field = self.conf.get(section, option)
+        xpath = self.conf.get("Xpath_field", name_field)
+        self.driver.find_element(By.XPATH, xpath).send_keys(value_field)
+
+
 
 

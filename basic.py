@@ -3,11 +3,10 @@
 
 from selenium import webdriver
 from _configs._configs import Configs
-from _configs._configs_css import Configs_css
 from selenium.webdriver.chrome.options import Options
 
 
-class Basic_settings(Configs, Configs_css):
+class Basic_settings(Configs):
 
     def __init__(self, *args, **kwargs):
         options = webdriver.ChromeOptions()
@@ -17,7 +16,4 @@ class Basic_settings(Configs, Configs_css):
         self.driver.implicitly_wait(50)
 
         Configs.__init__(self, *args, **kwargs)
-        Configs_css.__init__(self, *args, **kwargs)
         self.configs()
-        self.configs_css()
-

@@ -42,3 +42,4 @@ class ClickGoButton(object):
         xpath = self.conf.get("Xpath_buttton", name_button)
         element = driver.find_element_by_xpath(xpath)
         element.click()
+
