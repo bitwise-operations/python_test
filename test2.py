@@ -14,13 +14,15 @@ class Test_form(Basic_settings, unittest.TestCase):
 
     def test_form(self):
         main_search = page2.MainSearch(self.driver, self.conf, self.base_url)
-        a = main_search.lite_search(self.s_url, "Search_data_lite")
-        main_search.search_text_element
+        main_search.lite_search(self.s_url, "Search_data_lite")
+        main_search.search_element("Xpath_search", "get_results")
+        # main_search.search_text_element
         main_search.click_go_button("tour_1")
         main_search.switch_fr
         main_search.click_go_button("look_cost")
         time.sleep(2)
-        main_search.click_go_button("package_1")
+        # main_search.click_go_button("package_1")
+        main_search.click = "package_1"
         time.sleep(2)
         main_search.switch_fr
         main_search.data_entry("Buyer", "surname", "surname_buyer")
