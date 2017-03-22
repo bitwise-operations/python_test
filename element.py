@@ -2,10 +2,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BaseSearchElement(object):
+    def __init__(self, locator):
+        self.locator = locator
 
     def __set__(self, obj, value):
         """Sets the text to the value supplied"""
         driver = obj.driver
+        print(value)
         WebDriverWait(driver, 100).until(
             lambda driver: driver.find_element_by_xpath(self.locator))
         driver.find_element_by_xpath(self.locator).send_keys(value)

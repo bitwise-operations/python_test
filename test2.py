@@ -22,19 +22,20 @@ class Test_form(Basic_settings, unittest.TestCase):
         main_search.click_go_button("look_cost")
         time.sleep(2)
         # main_search.click_go_button("package_1")
+        print(main_search.click)
         main_search.click = "package_1"
         time.sleep(2)
-        main_search.switch_fr
+        self.driver.switch_to.window(self.driver.window_handles[2])
+        time.sleep(3)
         main_search.data_entry("Buyer", "surname", "surname_buyer")
-
         time.sleep(2)
-        # assert main_page.is_title_matches(), "python.org title doesn't match."
-        # main_page.search_text_element = "pycon"
+        main_search.search_element("Xpath_field", "surname_buyer")
+
+        # self.driver.get("https://level.travel/packages/11759359")
+        # main_search.data_entry("Buyer", "surname", "surname_buyer")
         # time.sleep(2)
-        # main_page.click_go_button()
-        # search_results_page = page.SearchResultsPage(self.driver)
-        # time.sleep(2)
-        # assert search_results_page.is_results_found(), "No results found."
+        # main_search.search_element("Xpath_field", "surname_buyer")
+                
 
 if __name__ == '__main__':
     unittest.main()

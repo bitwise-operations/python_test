@@ -3,6 +3,9 @@ from element import BaseSwitch
 from element import ClickGoButton
 from locators import MainPageLocators
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+
+
 
 class Switch(BaseSwitch):
     pass
@@ -17,10 +20,12 @@ class BasePage(object):
         self.conf = conf
         self.base_url = base_url
 
-
-class MainSearch(BasePage, BaseSearchElement):
+class MainSearch(BasePage):
     switch_fr = BaseSwitch()
     click = Click()
+    print(click)
+    
+    # searchElement = BaseSearchElement()
 
     def lite_search(self, s_url, section):
         driver = self.driver
@@ -34,7 +39,7 @@ class MainSearch(BasePage, BaseSearchElement):
         data = "-".join([departure_city, "to", country, "departure", date_depart, "for", nights, "nights", adult, "adults", kids, "kids-1..5-stars"])
         _url = "/".join([self.base_url, s_url, data])
         driver.get(_url)
-        
+
     def click_go_button(self, name_button):
         """Triggers the search"""
         xpath = self.conf.get("Xpath_buttton", name_button)
@@ -42,14 +47,21 @@ class MainSearch(BasePage, BaseSearchElement):
         element.click()
 
     def data_entry(self, section, option, name_field):
-        value = self.conf.get(section, option)
-        locator = self.conf.get("Xpath_field", name_field)
-        a = BaseSearchElement() 
-        a = value
+        value1 = self.conf.get(section, option)
+        self.locator = self.conf.get("Xpath_field", name_field)
+        a = BaseSearchElement(self.locator)
+        a = value1
+
 
     def search_element(self, section, option):
-        locator = self.conf.get(section, option)
-        a = BaseSearchElement()
+        self.locator = self.conf.get(section, option)
+        a = BaseSearchElement(self.locator)
+
+
+
+
+
+    
 
 
 
