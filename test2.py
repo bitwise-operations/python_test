@@ -14,27 +14,26 @@ class Test_form(Basic_settings, unittest.TestCase):
 
     def test_form(self):
         main_search = page2.MainSearch(self.driver, self.conf, self.base_url)
-        main_search.lite_search(self.s_url, "Search_data_lite")
-        main_search.search_element("Xpath_search", "get_results")
-        # main_search.search_text_element
-        main_search.click_go_button("tour_1")
-        main_search.switch_fr
-        main_search.click_go_button("look_cost")
-        time.sleep(2)
-        # main_search.click_go_button("package_1")
-        print(main_search.click)
-        main_search.click = "package_1"
-        time.sleep(2)
-        self.driver.switch_to.window(self.driver.window_handles[2])
-        time.sleep(3)
-        main_search.data_entry("Buyer", "surname", "surname_buyer")
-        time.sleep(2)
-        main_search.search_element("Xpath_field", "surname_buyer")
-
-        # self.driver.get("https://level.travel/packages/11759359")
-        # main_search.data_entry("Buyer", "surname", "surname_buyer")
+        # main_search.lite_search(self.s_url, "Search_data_lite")
         # time.sleep(2)
-        # main_search.search_element("Xpath_field", "surname_buyer")
+        # main_search.search_element("Xpath_search", "get_results")
+        # main_search._click("tour_1")
+        # main_search.switch_fr
+        # main_search._click("look_cost")
+        # time.sleep(2)
+        # main_search._click("package_1")
+        # main_search.switch_fr
+
+        # self.driver.switch_to.window(self.driver.window_handles[2])
+        self.driver.get('https://level.travel/packages/13961215')
+        
+        # main_search.cycle_for("Buyer")
+        time.sleep(6)
+        main_search.search_element("A", "surname_buyer")
+        # main_search.data_entry("Buyer", "surname", "surname_buyer", "A")
+        time.sleep(4)
+        # main_search.data_entry("Buyer", "name", "name_buyer")
+
                 
 
 if __name__ == '__main__':

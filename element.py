@@ -1,26 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class BaseSearchElement(object):
-    def __init__(self, locator):
-        self.locator = locator
-
-    def __set__(self, obj, value):
-        """Sets the text to the value supplied"""
-        driver = obj.driver
-        print(value)
-        WebDriverWait(driver, 100).until(
-            lambda driver: driver.find_element_by_xpath(self.locator))
-        driver.find_element_by_xpath(self.locator).send_keys(value)
-
-    def __get__(self, obj, owner):
-        driver = obj.driver
-        WebDriverWait(driver, 100).until(
-            lambda driver: driver.find_element_by_xpath(self.locator))
-        element = driver.find_element_by_xpath(self.locator)
-        #return element.get_attribute("value")
-        return element
-
 class BaseSwitch(object):
 
     def __get__(self, obj, owner):
@@ -28,14 +8,25 @@ class BaseSwitch(object):
         for handle in driver.window_handles:
             driver.switch_to.window(handle)
 
-class ClickGoButton(object):
+class SearchElement(object):
+    def __init__(self, driver):
+        self.driver = driver
 
-    def __set__(self, obj, value):
-        driver = obj.driver
-        conf = obj.conf
-        xpath = conf.get("Xpath_buttton", value)
+    def set(self, locator, value):
+        driver = self.driver
         WebDriverWait(driver, 100).until(
-            lambda driver: driver.find_element_by_xpath(xpath))
-        element = driver.find_element_by_xpath(xpath)
-        element.click()
+            lambda driver: driver.find_element_by_xpath(locator))
+        driver.find_element_by_xpath(locator).send_keys(value)
 
+    def get(self, locator):
+        driver = self.driver
+        WebDriverWait(driver, 100).until(
+            lambda driver: driver.find_element_by_xpath(locator))
+        driver.find_element_by_xpath(locator)
+
+    def click(self, locator):
+        driver = self.driver
+        WebDriverWait(driver, 100).until(
+            lambda driver: driver.find_element_by_xpath(locator))
+        driver.find_element_by_xpath(locator).click()
+        

@@ -9,10 +9,11 @@ from selenium.webdriver.chrome.options import Options
 class Basic_settings(Configs):
 
     def __init__(self, *args, **kwargs):
-        options = webdriver.ChromeOptions()
-        options.add_argument("user-data-dir=/Users/qa1/Library/Application\ Support/Google/Chrome",)
-        options.add_argument("--profile-directory=qwe1")
-        self.driver = webdriver.Chrome('/Users/qa1/pytest2/chromedriver', chrome_options=options)
+        # options = webdriver.ChromeOptions()
+        # options.add_argument("user-data-dir=/Users/qa1/Library/Application\ Support/Google/Chrome",)
+        # options.add_argument("--profile-directory=qwe1")
+        # self.driver = webdriver.Chrome('/Users/qa1/pytest2/chromedriver', chrome_options=options)
+        self.driver = webdriver.PhantomJS()
         self.driver.implicitly_wait(50)
 
         Configs.__init__(self, *args, **kwargs)

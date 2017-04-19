@@ -1,16 +1,9 @@
-from element import BaseSearchElement
 from element import BaseSwitch
-from element import ClickGoButton
-from locators import MainPageLocators
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-
+from element import SearchElement
+import time
 
 
 class Switch(BaseSwitch):
-    pass
-
-class Click(ClickGoButton):
     pass
 
 class BasePage(object):
@@ -22,10 +15,6 @@ class BasePage(object):
 
 class MainSearch(BasePage):
     switch_fr = BaseSwitch()
-    click = Click()
-    print(click)
-    
-    # searchElement = BaseSearchElement()
 
     def lite_search(self, s_url, section):
         driver = self.driver
@@ -40,29 +29,30 @@ class MainSearch(BasePage):
         _url = "/".join([self.base_url, s_url, data])
         driver.get(_url)
 
-    def click_go_button(self, name_button):
-        """Triggers the search"""
-        xpath = self.conf.get("Xpath_buttton", name_button)
-        element = self.driver.find_element(By.XPATH, xpath)
-        element.click()
+    def _click(self, name_button, section="Xpath_buttton"):
+        xpath = self.conf.get(section, name_button)
+        s = SearchElement(self.driver)
+        s.click(xpath)
 
-    def data_entry(self, section, option, name_field):
-        value1 = self.conf.get(section, option)
-        self.locator = self.conf.get("Xpath_field", name_field)
-        a = BaseSearchElement(self.locator)
-        a = value1
-
+    def data_entry(self, section, option, name_field, section_field="Xpath_field"):
+        value = self.conf.get(section, option)
+        locator = self.conf.get(section_field, name_field)
+        s = SearchElement(self.driver)
+        s.set(locator, value)
 
     def search_element(self, section, option):
-        self.locator = self.conf.get(section, option)
-        a = BaseSearchElement(self.locator)
+        locator = self.conf.get(section, option)
+        s = SearchElement(self.driver)
+        s.get(locator)
 
-
-
-
-
-    
-
-
-
-
+    def cycle_for(self, section):
+        # a = list(self.conf[section].keys())
+        s = SearchElement(self.driver)
+        a = [option for option in self.conf[section]]
+        for i in range(len(a)):
+            value = self.conf.get(section, a[i])
+            print(value)
+            locator = "//*[@id='clientForm']//li[@class='" + a[i] + "']//input"
+            print(locator)
+            time.sleep(2)          
+            s.set(locator, value)
