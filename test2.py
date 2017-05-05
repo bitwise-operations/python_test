@@ -15,24 +15,33 @@ class Test_form(Basic_settings, unittest.TestCase):
     def test_form(self):
         main_search = page2.MainSearch(self.driver, self.conf, self.base_url)
         # main_search.lite_search(self.s_url, "Search_data_lite")
-        # time.sleep(2)
+        # self.driver.maximize_window()
         # main_search.search_element("Xpath_search", "get_results")
+        # time.sleep(2)
         # main_search._click("tour_1")
         # main_search.switch_fr
         # main_search._click("look_cost")
-        # time.sleep(2)
+        # time.sleep(3)
         # main_search._click("package_1")
+        # time.sleep(2)
         # main_search.switch_fr
 
         # self.driver.switch_to.window(self.driver.window_handles[2])
-        self.driver.get('https://level.travel/packages/13961215')
-        
+
         # main_search.cycle_for("Buyer")
-        time.sleep(6)
-        main_search.search_element("A", "surname_buyer")
+        self.driver.get("https://level.travel/packages/15220226")
+        a = self.driver.find_elements_by_xpath("//*[@id='clientForm']//input")
+        print(len(a))
+        for i in range(len(a), 1):
+            b = str(i)
+            self.driver.find_elements_by_xpath("//*[@id='clientForm']//input"+[b].clear()
+
+        # self.driver.save_screenshot('eyetest.png')
+        # main_search.cycle_for("Buyer")
         # main_search.data_entry("Buyer", "surname", "surname_buyer", "A")
-        time.sleep(4)
+
         # main_search.data_entry("Buyer", "name", "name_buyer")
+        time.sleep(10)
 
                 
 

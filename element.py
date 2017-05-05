@@ -15,7 +15,7 @@ class SearchElement(object):
     def set(self, locator, value):
         driver = self.driver
         WebDriverWait(driver, 100).until(
-            lambda driver: driver.find_element_by_xpath(locator))
+            lambda driver: driver.find_element_by_xpath(locator))        
         driver.find_element_by_xpath(locator).send_keys(value)
 
     def get(self, locator):
@@ -30,3 +30,4 @@ class SearchElement(object):
             lambda driver: driver.find_element_by_xpath(locator))
         driver.find_element_by_xpath(locator).click()
         
+

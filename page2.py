@@ -36,7 +36,9 @@ class MainSearch(BasePage):
 
     def data_entry(self, section, option, name_field, section_field="Xpath_field"):
         value = self.conf.get(section, option)
+        print(value)
         locator = self.conf.get(section_field, name_field)
+        print(locator)
         s = SearchElement(self.driver)
         s.set(locator, value)
 
@@ -49,10 +51,12 @@ class MainSearch(BasePage):
         # a = list(self.conf[section].keys())
         s = SearchElement(self.driver)
         a = [option for option in self.conf[section]]
+        print(a)
         for i in range(len(a)):
             value = self.conf.get(section, a[i])
             print(value)
             locator = "//*[@id='clientForm']//li[@class='" + a[i] + "']//input"
             print(locator)
-            time.sleep(2)          
+            time.sleep(2)
+            self.driver.find_element_by_xpath(locator).clear()
             s.set(locator, value)
